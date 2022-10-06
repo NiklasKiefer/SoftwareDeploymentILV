@@ -9,19 +9,19 @@
         "value": "niklasstorage1"
       },
       "appname": {
-        "value": "nodejsapp"
+        "value": "niklaskieferapp"
       },
       "location": {
         "value": "Central US"
       },
       "hostingPlanName": {
-        "value": "hostingplanname"
+        "value": "lab1serviceplan"
       },
       "serverFarmResourceGroup": {
-        "value": "serverfarmresourcegroup"
+        "value": "Lab1"
       },
       "alwaysOn": {
-        "value": true
+        "value": false
       },
       "linuxFxVersion": {
         "value": "NODE|12-lts"
