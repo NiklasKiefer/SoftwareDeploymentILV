@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "subscriptionId": {
+        "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      },
+      "storageaccountname": {
+        "value": "niklasstorage1"
+      },
+      "appname": {
+        "value": "nodejsapp"
+      },
+      "location": {
+        "value": "Central US"
+      },
+      "hostingPlanName": {
+        "value": "hostingplanname"
+      },
+      "serverFarmResourceGroup": {
+        "value": "serverfarmresourcegroup"
+      },
+      "alwaysOn": {
+        "value": true
+      },
+      "linuxFxVersion": {
+        "value": "NODE|12-lts"
+      }
+    }
+  }
