@@ -8,7 +8,7 @@ The task of this lab is to create an ARM template which:
 ## How to deploy
 Execute the following command:
 ```
-az deployment group create --name mydeployment --resource-group <resource-group-name> --template-file azuredeploy.json --parameters azuredeploy.paramters.json
+az deployment group create --name mydeployment --resource-group <resource-group-name> --template-file azuredeploy.json --parameters azuredeploy.parameters.json
 ```
 Keep in mind to update the azuredeploy.parameters.json file depending on the name of your resource group and app service plan.
 
