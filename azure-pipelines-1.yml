@@ -36,6 +36,8 @@ stages:
       displayName: 'Install Node.js'
 
     - script: |
+        cd ./Lab2
+        cd ./app
         npm install
         npm run build --if-present
         npm run test --if-present
@@ -44,7 +46,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
-        rootFolderOrFile: '$(Build.Repository.LocalPath)/Lab2/app'
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
         includeRootFolder: false
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
