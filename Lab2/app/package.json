@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha app.test.js",
-    "build": "node index.js"
+    "build": "echo 'build script executed.'"
   },
   "repository": {
     "type": "git",
