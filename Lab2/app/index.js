@@ -1,12 +1,5 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+let appInsights = require("applicationinsights");
+let connection_string = "InstrumentationKey=7fdfd2d6-c84d-4790-bc8f-df1ac51e6dcc;IngestionEndpoint=https://germanywestcentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://germanywestcentral.livediagnostics.monitor.azure.com/";
+appInsights.setup(connection_string).start();
 
-app.get('/', (req, res) => {
-  res.send('This is a NodeJS App.');
-});
-
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-
-});
+console.log("Hello World");
