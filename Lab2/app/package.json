@@ -4,7 +4,7 @@
   "description": "demo application for Software Deployment ILV",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha app.test.js",
     "build": "node index.js"
   },
   "repository": {
@@ -24,6 +24,11 @@
   },
   "homepage": "https://github.com/NiklasKiefer/SoftwareDeploymentILV#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "chai": "^4.3.6",
+    "express": "^4.18.2",
+    "mocha": "^10.1.0"
+  },
+  "devDependencies": {
+    "request": "^2.88.2"
   }
 }
