@@ -39,7 +39,7 @@ stages:
         cd ./Lab2
         cd ./app
         npm install
-        npm run build index.js--if-present
+        npm run build --if-present
         # npm test --if-present
       displayName: 'npm install, build and test'
 
