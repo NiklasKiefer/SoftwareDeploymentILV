@@ -38,9 +38,8 @@ stages:
     - script: |
         cd ./Lab2/app
         npm install
-        npm run build --if-present
         npm run test --if-present
-      displayName: 'npm install, build and test'
+      displayName: 'npm install and test'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
@@ -76,4 +75,4 @@ stages:
               appName: $(webAppName)
               runtimeStack: 'NODE|10.10'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-              startUpCommand: 'npm run start'
+              startUpCommand: 'npm run build'
