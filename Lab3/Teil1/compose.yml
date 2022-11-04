@@ -1,0 +1,32 @@
+version: '3'
+services:
+  #mysql
+  mysql: 
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: foodb
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - mysql:/var/lib/mysql
+    
+
+  #wordpress
+  wordpress:
+    depends_on:
+      - mysql
+    image: wordpress:latest
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: user1
+      WORDPRESS_DB_PASSWORD: 1234
+      WORDPRESS_DB_NAME: foodb
+    volumes:
+      ["./:/var/www/html"]
+volumes:
+  mysql: {}
