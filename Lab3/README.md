@@ -16,3 +16,13 @@ docker-compose up -d
 Keep in mind that the downloaded files will be located in the same folder as the compose file is located. Now let's continue with part 2.
 
 ## Part 2
+I used [this tutorial](https://betterprogramming.pub/customize-your-mysql-database-in-docker-723ffd59d8fb) for creating a MySQL image. Firt, I created the docker file, which sets up mysql, as well as setting an environment variable for a custom 'users' database. Then I added a COPY instruction for adding .sql files in the folder ./init-scripts. When building the container, the files from this folder in the host system will be copied to the container.
+
+After completing the custom mysql image, it can be built using the following command:
+```
+docker build -t <image_name> .
+```
+The finished build can then be run by using the following command:
+```
+docker run -d -p <port_in>:<port_out> --name <container_name> -e MYSQL_ROOT_PASSWORD=<password> <image_name>
+```
