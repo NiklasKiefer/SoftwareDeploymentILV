@@ -16,13 +16,18 @@ docker-compose up -d
 Keep in mind that the downloaded files will be located in the same folder as the compose file is located. Now let's continue with part 2.
 
 ## Part 2
-I used [this tutorial](https://betterprogramming.pub/customize-your-mysql-database-in-docker-723ffd59d8fb) for creating a MySQL image. Firt, I created the docker file, which sets up mysql, as well as setting an environment variable for a custom 'users' database. Then I added a COPY instruction for adding .sql files in the folder ./init-scripts. When building the container, the files from this folder in the host system will be copied to the container.
+I used multiple differnet tutorials for creating my custom images, one of which being [this tutorial from the lecture](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-16-04). It took me a bit to understand what commands to use, because of my lack of experience.
 
-After completing the custom mysql image, it can be built using the following command:
+In order to deploy the docker compose file, first the custom images have to be built. This can be done using the following command.
 ```
 docker build -t <image_name> .
 ```
-The finished build can then be run by using the following command:
+Keep in mind that the image file name has to be "dockerfile". Also make sure that the images are called "mysql" and "wordpress".
+
+After you are done with building both custom images, you can run the docker compose file using the following command.
 ```
 docker run -d -p <port_in>:<port_out> --name <container_name> -e MYSQL_ROOT_PASSWORD=<password> <image_name>
 ```
+The ports used when creating the images were:
+- Wordpress: 8080
+- MySQL: 3306
