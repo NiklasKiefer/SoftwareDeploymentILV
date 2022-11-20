@@ -9,4 +9,4 @@ Before being able to work with a cluster, it has to be created first. This can b
 I wanted to create the cluster manually using the command line, but I got repeated errors when using it due to quota errors. Instead, I just used the azure portal with the help of [this tutorial](https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-cli). With the tutorial, It was no problem to set up the AKS cluster. I used mainly default set ups as well as the Dev/Test preset for testing out kubernetes. After finishing the set up, the next step was to deploy a service.
 
 ## Configure and Deploy Wordpress + MySQL
-I used [this tutorial](https://www.linuxpathfinder.com/how-set-up-wordpress-with-mysql-on-kubernetes)
+I used [this tutorial](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
