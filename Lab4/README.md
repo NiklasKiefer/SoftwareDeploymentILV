@@ -49,8 +49,7 @@ wordpress   LoadBalancer   <your ip>    52.151.238.237   80:31005/TCP   12m
 ```
 The external IP is the address of your website. You can access it by typing it into your browser.
 
-## Access the website
-The website can be accessed using the IP [52.151.238.237](http://52.151.238.237)
+## Cluster URL
 The cluster url is:
 ```
 https://kieferniklascluster-dns-6c65ee8a.hcp.eastus.azmk8s.io:443
